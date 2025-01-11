@@ -1,21 +1,20 @@
 import React from 'react';
-import BuyItemButton from './BuyItemButton';
+import { Link } from 'react-router-dom';
 
-const ItemList = ({ items, onItemBought }) => {
+const ItemList = ({ items }) => {
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-4">Listed Items</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((item) => (
-        <div key={item.id} className="border p-4 mb-4 rounded">
-          <h3 className="font-bold">{item.name}</h3>
-          <p>{item.description}</p>
-          <p>Price: {item.price} ETH</p>
-          <p>Seller: {item.seller}</p>
-          {!item.isSold ? (
-            <BuyItemButton id={item.id} price={item.price} onItemBought={onItemBought} />
-          ) : (
-            <p className="text-red-500">Sold</p>
-          )}
+        <div key={item.id} className="border rounded-lg shadow-md p-6 bg-white">
+          <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+          <p className="text-gray-600 mb-4">{item.description}</p>
+          <p className="text-lg font-bold mb-4">{item.price} ETH</p>
+          <Link
+            to={`/item/${item.id}`}
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+          >
+            View Details
+          </Link>
         </div>
       ))}
     </div>

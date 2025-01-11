@@ -1,20 +1,28 @@
 {
-    "items": [
-      {
-        "id": 1,
-        "name": "Vintage Watch",
-        "description": "A beautiful antique timepiece",
-        "price": "0.5",
-        "seller": "0x1234567890123456789012345678901234567890",
-        "isSold": false
-      },
-      {
-        "id": 2,
-        "name": "Gaming Laptop",
-        "description": "High-performance gaming machine",
-        "price": "2",
-        "seller": "0x0987654321098765432109876543210987654321",
-        "isSold": false
-      }
-    ]
-  }
+  "items": [
+    {
+      "id": "1",
+      "name": "Vintage Watch",
+      "description": "A beautiful antique timepiece",
+      "price": "0.5",
+      "seller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "isSold": true
+    },
+    {
+      "id": "2",
+      "name": "Gaming Laptop",
+      "description": "High-performance gaming machine",
+      "price": "2",
+      "seller": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "isSold": false
+    },
+    {
+      "id": "69ff",
+      "name": "Gaming Chair",
+      "description": "Extremely  comfortable chair, say bye-bye to ur back-pain ",
+      "price": "0.17",
+      "seller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "isSold": false
+    }
+  ]
+}

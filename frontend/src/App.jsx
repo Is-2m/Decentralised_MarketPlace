@@ -1,30 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { initializeContract, getItems } from './utils/contractInteraction';
-import ListItemForm from './components/ListItemForm';
-import ItemList from './components/ItemList';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { initializeContract } from './utils/api';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import ListItem from './pages/ListItem';
+import ItemPage from './pages/ItemPage';
 
 function App() {
-  const [items, setItems] = useState([]);
-
   useEffect(() => {
-    const init = async () => {
-      await initializeContract();
-      await fetchItems();
-    };
-    init();
+    initializeContract();
   }, []);
 
-  const fetchItems = async () => {
-    const fetchedItems = await getItems();
-    setItems(fetchedItems);
-  };
-
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Decentralized Marketplace</h1>
-      <ListItemForm onItemListed={fetchItems} />
-      <ItemList items={items} onItemBought={fetchItems} />
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow bg-gray-100">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/list-item" element={<ListItem />} />
+            <Route path="/item/:id" element={<ItemPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
