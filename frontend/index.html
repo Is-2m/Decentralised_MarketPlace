@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace</title>
+  </head>
+  <body>
+    <h1>Decentralized Marketplace</h1>
+
+    <div>
+      <h2>List an Item</h2>
+      <input id="itemName" placeholder="Item Name" />
+      <input id="itemDescription" placeholder="Item Description" />
+      <input id="itemPrice" placeholder="Item Price (ETH)" />
+      <button id="listItemButton">List Item</button>
+    </div>
+
+    <div>
+      <h2>Buy an Item</h2>
+      <input id="itemId" placeholder="Item ID" />
+      <button id="buyItemButton">Buy Item</button>
+    </div>
+
+    <div>
+      <h2>Items for Sale</h2>
+      <ul id="itemsList"></ul>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
