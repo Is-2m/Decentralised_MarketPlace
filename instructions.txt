@@ -1,0 +1,26 @@
+# Terminal 1:
+npx hardhat node
+
+# Terminal 2:
+npx hardhat run scripts/deploy.js --network localhost
+
+# Terminal 3: 
+json-server --watch db.json --port 3001
+
+# Terminal 4:
+npm run dev
+
+
+
+
+
+# for cleaning/reseting
+
+# In Terminal 1:
+npx hardhat clean
+rm -rf artifacts/ cache/    # (or del artifacts/ cache/ on Windows)
+npx hardhat node
+
+# In Terminal 2 (after node is running):
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network localhost
