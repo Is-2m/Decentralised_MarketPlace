@@ -1,0 +1,20 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "Vintage Watch",
+        "description": "A beautiful antique timepiece",
+        "price": "0.5",
+        "seller": "0x1234567890123456789012345678901234567890",
+        "isSold": false
+      },
+      {
+        "id": 2,
+        "name": "Gaming Laptop",
+        "description": "High-performance gaming machine",
+        "price": "2",
+        "seller": "0x0987654321098765432109876543210987654321",
+        "isSold": false
+      }
+    ]
+  }
