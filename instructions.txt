@@ -2,12 +2,10 @@
 npx hardhat node
 
 # Terminal 2:
+npx hardhat compile
 npx hardhat run scripts/deploy.js --network localhost
 
-# Terminal 3: 
-json-server --watch db.json --port 3001
-
-# Terminal 4:
+# Terminal 3:
 npm run dev
 
 

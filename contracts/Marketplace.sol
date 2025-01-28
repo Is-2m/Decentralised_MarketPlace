@@ -16,16 +16,7 @@ contract Marketplace {
     
     event ItemListed(uint id, address seller, string name, uint price);
     event ItemSold(uint id, address buyer, uint price);
-    event ItemsCleared();  // New event
-    
-    // New function to clear all items
-    function clearItems() public {
-        for(uint i = 1; i <= itemCount; i++) {
-            delete items[i];
-        }
-        itemCount = 0;
-        emit ItemsCleared();
-    }
+
     
     // Function to list an item
     function listItem(string memory _name, string memory _description, uint _price) public {

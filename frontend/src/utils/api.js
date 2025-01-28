@@ -133,7 +133,7 @@ export const getItems = async () => {
         name: item.name,
         description: item.description,
         price: ethers.utils.formatEther(item.price),
-        isSold: item.isSold
+        isSold: item.isSold,
       });
     }
 
@@ -161,7 +161,7 @@ export const getItemById = async (id) => {
       name: item.name,
       description: item.description,
       price: ethers.utils.formatEther(item.price),
-      isSold: item.isSold
+      isSold: item.isSold,
     };
   } catch (error) {
     console.error("Error fetching item:", error);
